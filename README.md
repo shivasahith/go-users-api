@@ -99,12 +99,12 @@ go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
     - Create User
 
     - POST /users
-
+```json
 {
   "name": "Alice",
   "dob": "1990-05-10"
 }
-
+```
     - Response:
 
 {
