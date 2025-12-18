@@ -105,41 +105,41 @@ go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
   "dob": "1990-05-10"
 }
 ```
-    - Response:
-
+ - Response:
+```json
 {
   "id": 1,
   "name": "Alice",
   "dob": "1990-05-10"
 }
-
+```
 **Get User by ID (with Age)**
 
 **GET** /users/{id}
 
-    - Response:
-
+ - Response:
+```json
 {
   "id": 1,
   "name": "Alice",
   "dob": "1990-05-10",
   "age": 35
 }
-
+```
 **Update User**
 
 **PUT** /users/{id}
-
+```json
 {
   "name": "Alice Updated",
   "dob": "1991-03-15"
 }
-
+```
 **Delete User**
 
 **DELETE** /users/{id}
 
-    - Response:
+ - Response:
 
     204 No Content
 
@@ -147,12 +147,12 @@ go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
 
 **GET** /users
 
-    - Response (empty):
+ - Response (empty):
 
       []
 
-    - Response (with data):
-
+ - Response (with data):
+```json
 [
   {
     "id": 2,
@@ -161,7 +161,7 @@ go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
     "age": 29
   }
 ]
-
+```
 ---
 
 **🧠 Design Notes**
