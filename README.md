@@ -20,21 +20,37 @@ The API dynamically calculates a user’s age when fetching user details.
 
 .
 ├── cmd/server/main.go
+
 ├── config/
+
 ├── db/
+
 │   ├── migrations/
+
 │   └── sqlc/
+
 ├── internal/
+
 │   ├── handler/
+
 │   ├── repository/
+
 │   ├── service/
+
 │   ├── routes/
+
 │   ├── middleware/
+
 │   ├── models/
+
 │   └── logger/
+
 ├── go.mod
+
 ├── go.sum
+
 ├── sqlc.yaml
+
 └── README.md
 
 
