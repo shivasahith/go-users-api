@@ -65,44 +65,47 @@ go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
 
 2. **Database Setup**
 
-Create database:
+  - Create database:
 
-CREATE DATABASE users_db;
+    ```sql
+    CREATE DATABASE users_db;
+    ```
 
-Create application user:
-
-CREATE USER 'go_user'@'localhost'
-IDENTIFIED WITH mysql_native_password
-BY 'go_pass123';
-
-GRANT ALL PRIVILEGES ON users_db.* TO 'go_user'@'localhost';
-FLUSH PRIVILEGES;
-
+  - Create application user:
+    ```sql
+    CREATE USER 'go_user'@'localhost'
+    IDENTIFIED WITH mysql_native_password
+    BY 'go_pass123';
+    
+    GRANT ALL PRIVILEGES ON users_db.* TO 'go_user'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
+    
 3. **Generate SQLC Code**
 
-sqlc generate
+    sqlc generate
 
 4. **Run the Application**
 
-go run cmd/server/main.go
+    go run cmd/server/main.go
 
-Server starts on:
+  - Server starts on:
 
-http://localhost:8080
+    http://localhost:8080
 
 
 📌 **API Endpoints**
 
-Create User
+    - Create User
 
-POST /users
+    - POST /users
 
 {
   "name": "Alice",
   "dob": "1990-05-10"
 }
 
-Response:
+    - Response:
 
 {
   "id": 1,
@@ -114,7 +117,7 @@ Response:
 
 **GET** /users/{id}
 
-Response:
+    - Response:
 
 {
   "id": 1,
@@ -136,19 +139,19 @@ Response:
 
 **DELETE** /users/{id}
 
-Response:
+    - Response:
 
-204 No Content
+    204 No Content
 
 **List Users**
 
 **GET** /users
 
-Response (empty):
+    - Response (empty):
 
-[]
+      []
 
-Response (with data):
+    - Response (with data):
 
 [
   {
