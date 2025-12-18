@@ -1,0 +1,30 @@
+package config
+
+import (
+	"database/sql"
+	"fmt"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+func NewMySQLConnection() (*sql.DB, error) {
+	user := "go_user"
+	password := "go_pass123"
+	host := "127.0.0.1"
+	port := "3306"
+	dbname := "users_db"
+
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true",
+		user, password, host, port, dbname)
+
+	db, err := sql.Open("mysql", dsn)
+	if err != nil {
+		return nil, err
+	}
+
+	if err := db.Ping(); err != nil {
+		return nil, err
+	}
+
+	return db, nil
+}
